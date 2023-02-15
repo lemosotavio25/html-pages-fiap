@@ -1,0 +1,188 @@
+/* as regras aqui digitadas são aplicadas a todos
+os elementos da pagina - reset css*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+    --color-light: #fff;
+    --color-dark: #222;
+    --color-base:#dc143c;
+}
+
+
+/* regras genéricas */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* tira o marcador de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* tirar o sublinhado do link */
+/* cor e grossura da fonte */
+a {
+    text-decoration: none;
+    color:var(--color-light);
+    font-weight: 900;
+    transition: .5;
+}
+
+/* mudar de cor quando passa o mouse (elemento:hover) */
+a:hover {
+    color: var(--color-base)
+}
+
+/* header da página */
+.header-page {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* extremidades */
+    justify-content: space-between;
+    /* flex-direction: row; padrão */
+    /* align-items: flex-start;
+    justify-content: center; */
+    padding: 0 20px;
+    /* position: static; padrão*/
+    position: absolute;
+}
+
+.header-title{
+    font-size: 40px;
+    color: var(--color-light);
+}
+
+.header-menu ul {
+    display:flex;
+}
+
+.header-menu li {
+    margin: 0 10px;
+}
+
+/* hero */
+.hero{
+    width: 100%;
+    /* viewport - vh unidade de medida baseada no tamanho do dispositivo */
+    height: 100vh;
+    background-image:linear-gradient(to left, rgba(0, 0, 0, .01), rgba(0, 0,0)),
+    url(../images/pexels-felix-mittermeier-957002.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    color: var(--color-light);
+    font-size: 6vmin;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--color-light);
+    font-size: 3vmin;
+    margin-bottom: 20px;
+}
+
+.btn {
+    border: 3px solid var(--color-base);
+    padding: 8px 28px;
+    background-color: var(--color-base);
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: .7s;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+/* tour */
+
+.tour{
+    margin: 50px 0px;
+    text-align: center;
+    width: 100%;
+}
+.tour-title{
+    font-size: 5vmin;
+    color: var(--color-dark)
+}
+
+.tour-list{
+    width: 90%;
+    min-height: 100vh;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.tour-item{
+    width: 40%;
+    margin:40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 30px #ccc;
+    border-radius: 7px;
+    transition: .5s;
+}
+
+.tour-item img{
+    margin: 20px;
+    width: 80%;
+    border-radius: 7px;
+
+}
+
+.tour-item h3 {
+    margin: 10px;
+}
+
+.tour-item p {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tour-item:hover{
+    transform: scale(1.1)
+
+}
+
+/* pensando no responsivo - telas pequenas*/
+/* essa regra só funcionará em telas de 0 até 900px - telas maiores a regra
+será descartada. */
+@media(max-width: 900px) {
+    .tour-item {
+        width: 80%;
+    }
+
+    .header-menu a {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width: 600px) {
+    .header-title{
+        font-size: 20px;
+    }
+}

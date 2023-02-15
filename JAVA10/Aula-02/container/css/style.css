@@ -1,0 +1,28 @@
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: #ab72e0;
+    /* margem é externa */
+    /* margin: 20px 40px 160px 80px; */
+    /* margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+     */
+     padding: 20px;
+     box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    /* border: 10px outset rgb(158, 24, 24); */
+    /* border-right: 10px solid black;
+    border-bottom: 10px solid black; */
+    border: 5px solid;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.box-red{background-color: red;}
+.box-blue{background-color:blue;}
+.box-orange{background-color: orange;}

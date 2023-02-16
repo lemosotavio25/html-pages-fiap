@@ -1,0 +1,11 @@
+Tag Form - Início e fim do formulário
+atributos do form:
+id/name = identificação do componente - tem o mesmo valor
+method = forma como as informações serão enviadas
+    métodos de envio -> GET é método padrão de envio - dados são enviados via URL - pesquisa - links
+                        POST - não é o padrão, dados são enviados no corpo do form -> informações não são exibidas (dados sensíveis)
+    Action = indicar alguém que sabe pegar os dados digitados e enviar para o servidor, email, outra página, etc.... (quem pega as informações, pra onde vai)
+                form enviado (submit) , o valor da action é verificado...
+
+Dentro do formulário colocar os componentes
+Inserção através da tag <input type="tipo do campo">
